@@ -1,0 +1,22 @@
+﻿<Window x:Class="SP_Thread_Lesson2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_Thread_Lesson2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500">
+    <Grid x:Name="grid">
+        <Label Content="From" Height="30" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 25 0 0"></Label>
+        <TextBox x:Name="FromTb" Height="40" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70 20 0 0" ></TextBox>
+        <Button Name="FromFileBtn" Content="File" Height="30" Width="80" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 25 20 0" Background="YellowGreen" Command="{Binding FromCommand}" CommandParameter="{Binding ElementName=FromTb}"></Button>
+        
+        <Label Content="To" Height="30" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 25 0 0"></Label>
+        <TextBox x:Name="ToTb" Height="40" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70 20 0 0"></TextBox>
+        <Button Name="ToFileBtn" Content="File" Height="30" Width="80" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 25 20 0" Background="YellowGreen" Command="{Binding ToCommand}" CommandParameter="{Binding ElementName=ToTb}"></Button>
+
+        <ProgressBar x:Name="PBar"  Value="{Binding Values}" Maximum="{Binding Maximum}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal" Height="30" Width="350" Margin="20"></ProgressBar>
+        <Button Name="CopyBtn" Content="Copy" Height="30" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10 25 20 20" Background="YellowGreen" Command="{Binding CopyCommand}"></Button>
+
+    </Grid>
+</Window>
